@@ -30,3 +30,13 @@ const List = [
            }
       return newArr;
     }
+    //Find the missing element between two arrays
+    let arr1 =[1,2,3,3,4];
+    let arr2 =[1,2,3,4];
+    let sum1=0;
+    let sum2=0;
+    for(let i=0;i<arr1.length;i++)
+    sum1+=arr1[i];
+    for(let i=0;i<arr2.length;i++)
+    sum2+=arr2[i];
+    console.log(sum1 - sum2);
