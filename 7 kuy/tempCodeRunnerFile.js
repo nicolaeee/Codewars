@@ -1,12 +1,13 @@
-var results = {"Java": 10, "Ruby": 80, "Python": 65},
-    arr = [];
+let input = "12414";
 
-
-
-
-for (let key in results) {
-   if(results[key] >= 60) {
-    arr.push(key)
-    console.log(arr);
-   }
+function explode(input) {
+    let result = '';
+    let s = input.toString();  // So that input can also be a number
+    for (let i=0; i < s.length; i++){
+      let y = s[i].repeat(s[i]);
+      result += y;
+    }
+    return result;
   };
+
+explode(input);
