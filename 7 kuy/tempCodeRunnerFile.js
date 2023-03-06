@@ -1,13 +1,3 @@
-let input = "12414";
+let arr = [1, 2, 3, 4, 5];
 
-function explode(input) {
-    let result = '';
-    let s = input.toString();  // So that input can also be a number
-    for (let i=0; i < s.length; i++){
-      let y = s[i].repeat(s[i]);
-      result += y;
-    }
-    return result;
-  };
-
-explode(input);
+console.log(arr[0]);
