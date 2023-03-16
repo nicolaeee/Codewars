@@ -1,3 +1,16 @@
-let arr = [1, 2, 3, 4, 5];
+let results ={"Hindi": 60, "Dutch" : 93, "Greek": 71},
+    arr = [];
 
-console.log(arr[0]);
+
+for (let key in results) {
+   if(results[key] >= 60) {
+    arr.push([key, results[key]]);
+   }
+  };
+
+  arr.sort(function(a, b) {
+    return b[1] - a[1]
+  });
+
+ console.log(arr.joined());
+

@@ -1,15 +1,21 @@
-var results = {"Java": 10, "Ruby": 80, "Python": 65},
-    arr = [];
-
-
-
+let results ={"C++": 50, "ASM": 10, "Haskell": 20} ,
+    arr = [],
+    arrMerged = [],
+    arrFinal = [];
 
 for (let key in results) {
    if(results[key] >= 60) {
-    arr.push(key)
-    console.log(arr);
+    arr.push([key, results[key]]);
    }
   };
+
+  arr.sort(function(a, b) {
+    return b[1] - a[1]
+  });
+
+  arrMerged = arr.flat(1);
+  arrFinal = arrMerged.filter(x => isNaN(x))
+ console.log(arrFinal);
 
 
 //   let a = {b: 60, c : 93, d: 71}
