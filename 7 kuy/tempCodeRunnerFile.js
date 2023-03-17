@@ -1,16 +1,11 @@
-let results ={"Hindi": 60, "Dutch" : 93, "Greek": 71},
-    arr = [];
+let str = "vicccctoriaaaa",
+    arr = str.split(""),
+    arrSet = new Set (arr),
+    arrFinal = Array.from(arrSet);
 
-
-for (let key in results) {
-   if(results[key] >= 60) {
-    arr.push([key, results[key]]);
-   }
-  };
-
-  arr.sort(function(a, b) {
-    return b[1] - a[1]
-  });
-
- console.log(arr.joined());
-
+    if(arrFinal.length === str.length){
+        return true
+      } else {
+        return false
+      }
+console.log(arrFinal);
