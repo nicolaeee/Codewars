@@ -1,18 +1,26 @@
-function replaceChars(str) {
-    let counts = {};
-    let newStr = '';
-    for (let i = 0; i < str.length; i++) {
-      let char = str[i].toLowerCase();
-      if (counts[char]) {
-        newStr += ')';
-      } else {
-        newStr += '(';
-      }
-      counts[char] = (counts[char] || 0) + 1;
-    }
-    return newStr;
+function duplicateEncode(word){
+  let charCount = {};
+  word = word.toLowerCase();
+
+  for (let i = 0; i < word.length; i++) {
+    let char = word[i];
+    charCount[char] = (charCount[char] || 0) + 1;
   }
 
-  console.log(replaceChars("Succes")); // Output: "()()()"
+  let result = "";
+  for (let i = 0; i < word.length; i++) {
+    let char = word[i];
+    if (charCount[char] > 1) {
+      result += ")";
+    } else {
+      result += "(";
+    }
+  }
+
+  return result;
+}
+
+
+  console.log(duplicateEncode("Succes")); // Output: "()()()"
 
 
