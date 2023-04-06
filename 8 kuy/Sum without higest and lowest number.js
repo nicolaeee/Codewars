@@ -2,7 +2,6 @@ function sumArray(array) {
     if (!array) {
       return 0;
     }
-
     let sum = 0,
       sortedArray = array.sort((a, b) => a - b);
     for (let i = 0; i < sortedArray.length; i++) {
