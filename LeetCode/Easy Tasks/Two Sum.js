@@ -25,17 +25,19 @@ Output: [0,1]
 
 
 var twoSum = function(nums, target) {
- let map = new Map();
+    let map = new Map();
 
- for(let i = 0; i < nums.length; i++){
-    let num1 = nums[i];
-    let num2 = target - num1;
+    for(let i = 0; i < nums.length; i++){
+        let value = nums[i]
+        let valueLook = target - value;
 
-    if(map.has(num2)){
-        return [i, map.get(num2)]
+        if(map[valueLook] !== undefined){
+            return map[[valueLook], 1];
+        }
+        else{
+            map[value] = i;
+        }
     }
-    map.set(num1, i)
- }
 };
 
 let nums = [2, 7, 11, 15];
