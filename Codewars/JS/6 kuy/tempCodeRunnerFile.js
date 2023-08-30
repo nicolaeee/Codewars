@@ -12,7 +12,7 @@ for(let i = 0; i < string.length; i++){
 
 console.log(histogram)
 
-function count(string) {
+function arr(string) {
     histogram = {};
     for(let i = 0; i < string.length; i++){
         let ch = string[i]
@@ -29,5 +29,5 @@ function count(string) {
     else
         return histogram
   }
-let waw = {};
-console.log(count(waw));
+
+console.log(arr(string));
