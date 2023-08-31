@@ -1,14 +1,11 @@
-Array.prototype.last = function(arr) {
-
-    if (this.length === 0){
-        return JSON.parse('-1');
+Array.prototype.last = function() {
+    if (this.length === 0) {
+        return -1; // Return -1 for an empty array
+    } else {
+        return this[this.length - 1]; // Return the last element of the array
     }
-        else{
-            return JSON.parse(this.slice(-1))
-        }
-    // return console.log(this.slice(-1).join(''));
 };
 
-let nums = [null, {}, 3];
+let nums = [null, {}, 3, []];
 
 nums.last()
