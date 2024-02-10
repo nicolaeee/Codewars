@@ -1,22 +1,12 @@
-function XO(str) {
-    let counterX = 0,
-        counterO = 0;
-    for(let i = 0; i < str.length; i++){
-       if(str[i] === 'x'){
-         counterX++;
-       }
-      else if(str[i] === 'o'){
-        counterO++
-      }
+function squareDigits(num){
+
+    let sumArray = [],
+        numArray = Array.from(String(num), Number)
+
+    for(i = 0; i < numArray.length; i++){
+      sumArray.push(numArray[i] ** 2)
     }
-  if(counterX === counterO){
-    return true
+    return sumArray.join('').toString()
   }
-  else{
-    return false
-  }
-}
 
-let string = 'ooxx'
-
-XO(string)
+console.log(squareDigits(345))
